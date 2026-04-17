@@ -128,27 +128,3 @@ def train_model():
     torch.save(test_data,"drowsy_test_data.pth")
 if __name__=="__main__":
     train_model()
-
-# -----------------------------
-# EVALUATE (ACCURACY)
-# -----------------------------
-'''correct = 0
-total = 0
-
-model.eval()
-
-with torch.no_grad():
-    for data in data_list:
-
-        output = model(data)
-        prediction = 1 if output.item() > 0.5 else 0
-        actual = int(data.y.item())
-
-        if prediction == actual:
-            correct += 1
-
-        total += 1
-
-accuracy = (correct / total) * 100
-
-print(f"Accuracy: {accuracy:.2f}%")'''
