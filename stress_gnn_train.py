@@ -206,26 +206,3 @@ def train_model():
     
 if __name__=="__main__":
     train_model()
-
-# -----------------------------
-# TEST ACCURACY
-# -----------------------------
-'''correct = 0
-total = 0
-
-#model.eval()
-with torch.no_grad():
-    for data in test_data:
-
-        pred = 1 if model(data).item() > 0.5 else 0
-        actual = int(data.y.item())
-
-        if pred == actual:
-            correct += 1
-
-        total += 1
-if total==0:
-    print("No test data available")
-else:
-    accuracy = (correct / total) * 100
-    print(f"\nTest Accuracy: {accuracy:.2f}%")'''
